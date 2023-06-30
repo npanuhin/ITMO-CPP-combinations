@@ -48,6 +48,7 @@ include(${CMAKE_BINARY_DIR}/conan.cmake)
 
 conan_cmake_configure(
     REQUIRES gtest/1.13.0
+    REQUIRES pugixml/1.13
     GENERATORS cmake_find_package
 )
 
@@ -62,5 +63,8 @@ conan_cmake_install(
 
 add_subdirectory(libraries)
 
+find_package(pugixml REQUIRED)
+
 add_executable(main src/main.cpp)
+target_link_libraries(main PUBLIC pugixml::pugixml)
 target_link_libraries(main PRIVATE combinations::combinations)
