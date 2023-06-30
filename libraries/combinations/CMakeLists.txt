@@ -3,6 +3,8 @@ project(combinations)
 add_library(${PROJECT_NAME}
         include/combinations/Combinations.hpp src/Combinations.cpp
         include/combinations/Component.hpp src/Component.cpp
+        include/combinations/Combination.hpp src/Combination.cpp
+        include/combinations/DateTime.hpp src/DateTime.cpp
         )
 
 target_include_directories(${PROJECT_NAME} PUBLIC include)
