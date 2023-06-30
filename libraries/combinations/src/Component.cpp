@@ -15,7 +15,6 @@ Component Component::from_stream(std::istream& strm) {
     component.type   = static_cast<InstrumentType>(type);
     switch (component.type) {
     case InstrumentType::C:
-        [[fallthrough]];
     case InstrumentType::O:
         [[fallthrough]];
     case InstrumentType::P:
